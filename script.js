@@ -68,3 +68,20 @@ toggleModeBtn.addEventListener("click", function () {
 	// Save choice.
 	localStorage.setItem("mode", newMode);
 });
+
+/***********************
+* BACKGROUND MUSIC *
+***********************/
+
+const bgMusic = document.getElementById("bg-music");
+const flipBook = document.getElementById("flip_book");
+
+let musicStarted = false;
+
+flipBook.addEventListener("click", () => {
+	if (!musicStarted) {
+		bgMusic.play();
+		bgMusic.volume = 0.3; // chỉnh âm lượng (0.0 - 1.0)
+		musicStarted = true;
+	}
+});
